@@ -29,7 +29,7 @@
 #countdown {
     font-size: 150%;
     font-family: 'Courier New', Courier, monospace; /* Digital clock effect */
-    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+    background-color: rgb(255, 255, 255); /* Slightly transparent background */
     padding: 20px;
     border-radius: 10px;
 }
@@ -70,7 +70,7 @@ header {
 
 /* Container styling for itinerary */
 .container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgb(255, 255, 255);
     padding: 300px;
     border-radius: 10px;
     max-width: 1000px;
