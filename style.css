@@ -1,30 +1,181 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    background: #ffd36cd4;
+}
+
+/* Countdown container styling */
+#countdown-container {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFC0CB; /* Pink background */
+    color: #000000;
+}
+
+#countdown-text {
+    font-size: 20px;
+    background-color: #FFC0CB;
+    font-style: italic;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Times New Roman';
+    margin-bottom: 20px; /* Space between text and countdown */
+}
+
+#countdown {
+    font-size: 150%;
+    font-family: 'Courier New', Courier, monospace; /* Digital clock effect */
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
 /* Hide content by default */
 .hidden {
     display: none;
 }
 
-/* Countdown container styling */
-#countdown-container {
-    font-size: 2rem;
+/* Header styling */
+header {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    color: white;
+    font-family: 'Playfair Display', sans-serif;
     text-align: center;
-    margin-top: 100px;
 }
 
-/* Background styling */
-.background {
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
+/* Icons styling */
+.icons {
     display: flex;
     justify-content: center;
-    align-items: center;
+    margin-top: 10px;
 }
 
-/* Content container styling */
+.icon {
+    width: 400px;
+    background-color: #FFC0CB;
+    margin: 0 10px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6mm), 0 calc(100% - 6mm));
+}
+
+/* Special Message styling */
+.special-message {
+    margin-top: 30px;
+}
+
+/* Container styling for itinerary */
 .container {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px;
+    padding: 300px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 1000px;
     width: 100%;
+    margin: 0 auto;
 }
+
+/* Itinerary styling */
+.itinerary {
+    list-style-type: none;
+    padding: 0;
+}
+
+.itinerary li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.itinerary a {
+    color: #4c8aef;
+    text-decoration: none;
+}
+
+#confetti {
+    left: 0;
+    position: fixed;
+    right: 0; 
+    top: -160px;
+    z-index: 10000;
+   }
+    
+   #confetti .ball {
+    animation-iteration-count :infinite !important;
+    -webkit-animation-iteration-count :infinite !important;
+    border-radius: 50%;
+    cursor: default;
+    display: inline-block;
+    height: 10px;
+    user-select: none; 
+    -webkit-user-select: none; 
+    width: 10px;
+   } 
+    
+   @-webkit-keyframes falling-left {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 1;}
+   }
+    
+   @keyframes falling-left {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 1;}
+   }
+    
+   #confetti .ball:nth-child(2n) {
+    -webkit-animation: falling-left linear;
+    animation: falling-left linear ;
+   }
+    
+   @-webkit-keyframes falling-right {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 0;}
+    10% { opacity: 1;}
+    20% { opacity: 0;}
+    30% { opacity: 1;}
+    40% { opacity: 0;}
+    50% { opacity: 1;}
+    60% { opacity: 0;}
+    70% { opacity: 1;}
+    80% { opacity: 0;}
+    90% { opacity: 1;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 0;}
+   }
+    
+   @keyframes falling-right {
+    0% {-webkit-transform: translate3d(0,0,0);opacity: 1;}
+    10% { opacity: 0;}
+    20% { opacity: 1;}
+    30% { opacity: 0;}
+    40% { opacity: 1;}
+    50% { opacity: 0;}
+    60% { opacity: 1;}
+    70% { opacity: 0;}
+    80% { opacity: 1;}
+    90% { opacity: 0;}
+    100% {-webkit-transform: translate3d(0,120vh,0); opacity: 0;} 
+   }
+    
+   #confetti .ball:nth-of-type(2n+1) {
+    -webkit-animation: falling-right linear ;
+    animation: falling-right linear;
+   }

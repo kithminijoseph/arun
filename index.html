@@ -5,57 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Celebration</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
 </head>
 <body>
     <!-- Countdown Timer -->
+    
     <div id="countdown-container">
-        <h1>Coming Soon!</h1>
+        <img src="icon2.png" alt="Icon 1" class="icon">
+        <div id="countdown-text"> A special day is just round the corner...</div>
         <div id="countdown"></div>
     </div>
 
     <!-- Hidden Birthday Content -->
     <div id="content" class="hidden">
-        <!-- Background -->
-        <div class="background">
-            <div class="container">
-                <!-- Heading -->
-                <h1>Happy Birthday [Name]!</h1>
-
-                <!-- Cute Icons Section -->
-                <div class="icons">
-                    <img src="images/icon1.png" alt="Icon 1">
-                    <img src="images/icon2.png" alt="Icon 2">
-                </div>
-
-                <!-- Itinerary Section -->
-                <section class="itinerary">
-                    <h2>Today's Itinerary</h2>
-                    <ul>
-                        <li>
-                            <span>9:00 AM – Breakfast at </span>
-                            <a href="restaurant1/index.html">Café Delight</a>
-                        </li>
-                        <li>
-                            <span>1:00 PM – Lunch at </span>
-                            <a href="restaurant2/index.html">Gourmet Bistro</a>
-                        </li>
-                        <li>
-                            <span>7:00 PM – Dinner at </span>
-                            <a href="restaurant3/index.html">Ocean View Restaurant</a>
-                        </li>
-                    </ul>
-                </section>
-
-                <!-- Personal Message Section -->
-                <section class="personal-message">
-                    <h2>A Special Message</h2>
-                    <p>
-                        Dear [Name],<br>
-                        I hope today is as amazing as you are! Enjoy every moment of your special day.
-                    </p>
-                </section>
+        <header>
+            <h1>Happy Birthday Arun!</h1>
+            <div class="icons">
+                <img src="images/icon1.png" alt="Icon 1" class="icon">
+                <img src="images/icon2.png" alt="Icon 2" class="icon">
             </div>
-        </div>
+            <div id="confetti"></div>
+        </header>
+
+        <!-- Special Message -->
+        <section class="special-message">
+            <h2>A Special Message</h2>
+            <p>
+                Dear [Name],<br>
+                I hope today is as amazing as you are! Enjoy every moment of your special day.
+            </p>
+        </section>
+
+        <!-- Itinerary Section -->
+        <section class="container">
+            <h2>Today's Itinerary</h2>
+            <ul class="itinerary">
+                <li>
+                    <span>9:00 AM – Breakfast at </span>
+                    <a href="restaurant1/index.html">Café Delight</a>
+                </li>
+                <li>
+                    <span>1:00 PM – Lunch at </span>
+                    <a href="restaurant2/index.html">Gourmet Bistro</a>
+                </li>
+                <li>
+                    <span>7:00 PM – Dinner at </span>
+                    <a href="restaurant3/index.html">Ocean View Restaurant</a>
+                </li>
+            </ul>
+        </section>
     </div>
 
     <script src="script.js"></script>
