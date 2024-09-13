@@ -1,0 +1,30 @@
+/* Hide content by default */
+.hidden {
+    display: none;
+}
+
+/* Countdown container styling */
+#countdown-container {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* Background styling */
+.background {
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content container styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
