@@ -1,5 +1,5 @@
 // Set target date and time (YYYY-MM-DDTHH:MM:SS format)
-const targetDate = new Date("2024-09-23T09:00:00").getTime();
+const targetDate = new Date("2024-09-21T07:30:00").getTime();
 
 // Elements
 const countdown = document.getElementById("countdown");
