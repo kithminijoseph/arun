@@ -1,5 +1,5 @@
 // Set target date and time (YYYY-MM-DDTHH:MM:SS format)
-const targetDate = new Date("2024-09-17T07:30:00").getTime();
+const targetDate = new Date("2024-09-18T02:16:00").getTime();
 
 // Elements
 const countdown = document.getElementById("countdown");
@@ -25,33 +25,22 @@ const updateCountdown = setInterval(() => {
         clearInterval(updateCountdown);
         countdownContainer.style.display = "none"; // Hide countdown
         content.classList.remove("hidden"); // Show content
+        startConfetti(); // Trigger confetti when countdown reaches zero
     }
 }, 1000);
 
-jQuery("document").ready(function($){
-    var flakes = '',
-    randomColor;
-    for(var i = 0, len = 400; i < len; i++) {
-    randomColor = Math.floor(Math.random()*16777215).toString(16);
-    flakes += '<div class="ball" style="background: #'+randomColor;
-    flakes += '; animation-duration: '+(Math.random() * 9 + 2)+'s; animation-delay: ';
-    flakes += (Math.random() * 2 + 0)+'s;"></div>';
-    }
-    document.getElementById('confetti').innerHTML = flakes;
-   });
-
-
-   $(document).ready(function() {
+jQuery("document").ready(function($) {
     var flakes = '';
 
+    // Function to generate random pastel colors
     function getRandomPastelColor() {
-        // Generate random RGB values between 127 and 255 (lighter colors)
         var r = Math.floor(Math.random() * 128 + 127);
         var g = Math.floor(Math.random() * 128 + 127);
         var b = Math.floor(Math.random() * 128 + 127);
         return 'rgb(' + r + ',' + g + ',' + b + ')';
     }
 
+    // Generate confetti
     for (var i = 0, len = 400; i < len; i++) {
         var randomColor = getRandomPastelColor();
         flakes += '<div class="ball" style="background: ' + randomColor;
@@ -64,50 +53,19 @@ jQuery("document").ready(function($){
     // Function to start the confetti
     function startConfetti() {
         $('#confetti').show();
+        setTimeout(stopConfetti, 10000); // Stop confetti after 10 seconds
     }
 
     // Function to stop the confetti
     function stopConfetti() {
         $('#confetti').hide();
     }
-
-    // Start confetti
-    startConfetti();
-
-    // Stop confetti after 10 seconds
-    setTimeout(stopConfetti, 10000); // 10000 milliseconds = 10 seconds
-
-
-    // Countdown Timer
-    const targetDate = new Date("2024-09-20T09:00:00").getTime();
-
-    function updateClock() {
-        const now = new Date().getTime();
-        const timeLeft = targetDate - now;
-
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        $('#digital-clock').text(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-
-        if (timeLeft < 0) {
-            clearInterval(clockInterval);
-            $('#countdown-container').hide();
-            $('#content').removeClass('hidden');
-        }
-    }
-
-    const clockInterval = setInterval(updateClock, 1000);
 });
 
+// Wavy text animation
 const text = document.getElementById("wavy-text");
 const letters = text.textContent.split("");
 
 text.innerHTML = letters.map((letter, i) => {
     return `<span style="animation-delay: ${i * 50}ms;">${letter}</span>`;
 }).join(" ");
-
-
-  
