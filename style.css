@@ -38,15 +38,18 @@
     display: none;
 }
 
+body {
+    margin: 0;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f0f0; /* Optional: Set a background color */
+    text-align: center; /* Center the header horizontally */
+}
+
 h1 {
-    font-family: 'Times New Roman';
-    font-size: 50px;
-    display: inline-block; /* Flexbox layout */
-    justify-content: center; /* Center horizontally */
-    font-weight: bold;
-    color: #ffffff;
-    white-space: nowrap;
-    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    font-size: 60px;
+    color: #ff5e5e;
+    margin-top: 3cm; /* 10cm space from the top */
 }
 
 h1 span {
