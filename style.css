@@ -47,7 +47,7 @@ body {
 
 h1 {
     font-family: 'Times New Roman';
-    font-size: 60px;
+    font-size: 80px;
     color: #5e96ff;
     margin-top: 3cm; /* 10cm space from the top */
 }
@@ -119,21 +119,41 @@ h1 span {
 
 /* Container styling for itinerary */
 .container {
-    background-color: rgba(141, 238, 236, 0.884);
+    background-color: rgba(141, 206, 238, 0.884);
     padding: 200px;
     border-radius: 10px;
-    max-width: 0px;
+    max-width: 300px;
     width: 100%;
     margin: 0 auto;
 }
 
 /* Itinerary styling */
+.itinerary-header {
+    background-color: rgba(141, 206, 238, 0);
+    text-align: center;
+    font-size: 30px;
+    list-style-type: none;
+    padding: 0;
+}
 .itinerary {
+    background-color: #ffffff;
+    text-align: left;
+    height: 20px;
+    width: 500px;
+    list-style-type: none;
+    padding: 0;
+}
+.itinerary2 {
+    background-color: #ffffff00;
+    text-align: left;
+    height: 20px;
+    width: 500px;
     list-style-type: none;
     padding: 0;
 }
 
 .itinerary li {
+    color: #4c8aef;
     font-size: 20px
 }
 
