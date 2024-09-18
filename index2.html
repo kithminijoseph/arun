@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps with Multiple Markers</title>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAftGrA8Fe1jnHeNkmqYeDKx-BIMWMIxfc&callback=initMap">
+    </script>
+    <script>
+        // Initialize the map
+        function initMap() {
+          // Create the map centered at a specific location
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: { lat: 39.8283, lng: -98.5795 } // Center of the USA
+          });
+    
+          // Array of marker data (latitude, longitude, title, and color)
+          var locations = [
+            { lat: 40.7128, lng: -74.0060, title: 'New York City', color: '#FFB6C1' }, // Pastel Pink
+            { lat: 34.0522, lng: -118.2437, title: 'Los Angeles', color: '#ADD8E6' }, // Pastel Blue
+            { lat: 41.8781, lng: -87.6298, title: 'Chicago', color: '#FFB6C1' }, // Pastel Pink
+            { lat: 29.7604, lng: -95.3698, title: 'Houston', color: '#ADD8E6' } // Pastel Blue
+          ];
+    
+          // Loop through the array to create markers
+          locations.forEach(function(location) {
+            var marker = new google.maps.Marker({
+              position: { lat: location.lat, lng: location.lng },
+              map: map,
+              title: location.title,
+            });
+    
+            // Create an info window for each marker
+            var infowindow = new google.maps.InfoWindow({
+              content: location.title
+            });
+    
+            // Add a click listener to open the info window when the marker is clicked
+            marker.addListener('click', function() {
+              infowindow.open(map, marker);
+            });
+          });
+        }
+      </script>
+    </head>
+    <body>
+      <div id="map" style="height: 500px; width: 100%;"></div>
+    </body>
+    </html>

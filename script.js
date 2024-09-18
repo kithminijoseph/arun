@@ -69,3 +69,4 @@ const letters = text.textContent.split("");
 text.innerHTML = letters.map((letter, i) => {
     return `<span style="animation-delay: ${i * 50}ms;">${letter}</span>`;
 }).join(" ");
+
