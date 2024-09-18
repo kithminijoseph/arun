@@ -1,5 +1,5 @@
 // Set target date and time (YYYY-MM-DDTHH:MM:SS format)
-const targetDate = new Date("2024-09-21T07:30:00").getTime();
+const targetDate = new Date("2024-09-17T07:30:00").getTime();
 
 // Elements
 const countdown = document.getElementById("countdown");
@@ -41,13 +41,20 @@ jQuery("document").ready(function($){
    });
 
 
-$(document).ready(function() {
-    var flakes = '',
-        randomColor;
+   $(document).ready(function() {
+    var flakes = '';
+
+    function getRandomPastelColor() {
+        // Generate random RGB values between 127 and 255 (lighter colors)
+        var r = Math.floor(Math.random() * 128 + 127);
+        var g = Math.floor(Math.random() * 128 + 127);
+        var b = Math.floor(Math.random() * 128 + 127);
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+    }
 
     for (var i = 0, len = 400; i < len; i++) {
-        randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        flakes += '<div class="ball" style="background: #' + randomColor;
+        var randomColor = getRandomPastelColor();
+        flakes += '<div class="ball" style="background: ' + randomColor;
         flakes += '; animation-duration: ' + (Math.random() * 9 + 2) + 's; animation-delay: ';
         flakes += (Math.random() * 2 + 0) + 's;"></div>';
     }
@@ -69,6 +76,7 @@ $(document).ready(function() {
 
     // Stop confetti after 10 seconds
     setTimeout(stopConfetti, 10000); // 10000 milliseconds = 10 seconds
+
 
     // Countdown Timer
     const targetDate = new Date("2024-09-20T09:00:00").getTime();
@@ -93,3 +101,13 @@ $(document).ready(function() {
 
     const clockInterval = setInterval(updateClock, 1000);
 });
+
+const text = document.getElementById("wavy-text");
+const letters = text.textContent.split("");
+
+text.innerHTML = letters.map((letter, i) => {
+    return `<span style="animation-delay: ${i * 50}ms;">${letter}</span>`;
+}).join(" ");
+
+
+  
