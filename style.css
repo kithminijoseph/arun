@@ -112,6 +112,7 @@ h1 span {
 
 
 
+
 /* Special Message styling */
 .special-message {
     margin-top: 30px;
@@ -125,6 +126,12 @@ h1 span {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
+}
+
+.icon6 {
+    width: 210px;
+    background-color: #ffd36c00;
+    background-color: rgba(141, 206, 238, 0.884);
 }
 
 /* Itinerary styling */

@@ -18,10 +18,10 @@
           // Array of marker data (latitude, longitude, title, and color)
           var locations = [
             { lat: 51.7463249396212, lng: -1.2565242465528599, title: 'Meet Kithmini <3', src: "icon2.png"}, 
-           // { lat: 51.7463249396212, lng: -1.2565242465528599, title: 'Oxford River Cruises'}, // Pastel Pink
-            { lat: 34.0522, lng: -118.2437, title: 'Los Angeles'}, // Pastel Blue
-            { lat: 41.8781, lng: -87.6298, title: 'Chicago'}, // Pastel Pink
-            { lat: 29.7604, lng: -95.3698, title: 'Houston'} // Pastel Blue
+            { lat: 51.7463249396212, lng: -1.2565242465528599, title: 'Oxford River Cruises'}, // Pastel Pink
+            { lat: 34.0522, lng: -118.2437, title: 'Mowgli's'}, // Pastel Blue
+            { lat: 41.8781, lng: -87.6298, title: 'Gees'}, // Pastel Pink
+            { lat: 29.7604, lng: -95.3698, title: 'Ice Skating'} // Pastel Blue
           ];
     
           // Loop through the array to create markers
@@ -30,7 +30,6 @@
               position: { lat: location.lat, lng: location.lng },
               map: map,
               title: location.title,
-              image:src
             });
     
             // Create an info window for each marker
