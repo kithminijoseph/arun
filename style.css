@@ -1,6 +1,6 @@
 /* Basic reset */
 * {
-    font-family: Optima, sans-serif;
+
 
     background: #ffd36c;
 }
@@ -124,7 +124,7 @@ h1 span {
 .container {
     background-color: rgba(141, 206, 238, 0.884);
     padding: 20px; /* Reduced padding for a tighter fit */
-    border-radius: 10px;
+    border-radius: 20px;
     max-width: 600px; /* Increased width to fit content better */
     width: 100%;
     margin: 0 auto;
@@ -145,11 +145,9 @@ h1 span {
     background-color: #ffd36c00;
     border-radius: 20%;
     background-color: rgba(141, 206, 238, 0.884);
-    animation: pulse 3.5s ease-in-out;
 }
 .map-header {
     background-color: rgba(182, 16, 16, 0);
-    font-family: Optima, sans-serif;
     color: rgb(211, 31, 31);
     font-style: italic;
     justify-content: center;
@@ -162,7 +160,7 @@ h1 span {
 /* Itinerary styling */
 .itinerary-header {
     background-color: rgba(141, 206, 238, 0);
-    font-family: Optima, sans-serif;
+
     text-align: center;
     font-size: 25px; /* Adjusted font size */
     margin-bottom: 10px; /* Reduced margin for tighter fit */
@@ -172,12 +170,12 @@ h1 span {
 .itinerary {
     background-color: #ffffff;
     text-align: left;
-    font-family: Optima, sans-serif;
+    border-radius: 10px;
     padding: 10px; /* Reduced padding */
     margin-bottom: 5px; /* Reduced margin between itinerary items */
     list-style-type: none;
     font-size: 18px; /* Adjust font size for better fit */
-    width: auto; /* Allow width to adjust based on content */
+    width: 100px; /* Allow width to adjust based on content */
 }
 
 .itinerary2 {

@@ -11,17 +11,20 @@
         function initMap() {
           // Create the map centered at a specific location
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
+            zoom: 10,
             center: { lat: 51.625201449895364, lng: -1.1568100247969975 }
           });
     
-          // Array of marker data (latitude, longitude, title, and color)
+          // Array of marker data (latitude, longitude, title, image)
           var locations = [
-            { lat: 51.7463249396212, lng: -1.2565242465528599, title: 'Meet Kithmini <3', src: "icon2.png"}, 
-            { lat: 51.7463249396212, lng: -1.2565242465528599, title: 'Oxford River Cruises'}, // Pastel Pink
-            { lat: 34.0522, lng: -118.2437, title: 'Los Angeles'}, // Pastel Blue
-            { lat: 41.8781, lng: -87.6298, title: 'Chicago'}, // Pastel Pink
-            { lat: 29.7604, lng: -95.3698, title: 'Houston'} // Pastel Blue
+            { lat: 51.4599047575489, lng: -0.9725258404984491, title: 'Meet Kithmini <3', img: 'images/arumini.jpg'},
+            { lat: 51.755808639733814, lng: -1.2700805332292142, title: 'Oxford Station'},
+            { lat: 51.75563027887768, lng: -1.2743799897362051, title: 'Botley Park', img: 'images/tumble.jpg'},
+            { lat: 51.7463249396212, lng: -1.2565242465528599, title: 'Oxford River Cruises', img: 'images/boat.jpg'},
+            { lat: 51.74970843831919, lng: -1.260958329659591, title: 'Mowgli Oxford', img: 'images/mowgli.jpg'},
+            { lat: 51.764572772970304, lng: -1.2611007486993255, title: 'Gees', img: 'images/gees.jpg'},
+            { lat: 51.748902806762935, lng: -1.2650393315086836, title: 'Oxford Ice Rink', img: 'images/ice.jpeg'},
+            { lat: 51.75037432987272, lng: -1.2612105621933176, title: 'Westgate Shopping Mall', img: 'images/westgate.jpg'}
           ];
     
           // Loop through the array to create markers
@@ -29,12 +32,16 @@
             var marker = new google.maps.Marker({
               position: { lat: location.lat, lng: location.lng },
               map: map,
-              title: location.title,
+              title: location.title
             });
     
-            // Create an info window for each marker
+            // Create an info window with the image and title
             var infowindow = new google.maps.InfoWindow({
-              content: location.title 
+              content: `
+                <div style="text-align: center;">
+                  <h3>${location.title}</h3>
+                  <img src="${location.img}" alt="${location.title}" style="width: 300px; height: auto;">
+                </div>`
             });
     
             // Add a click listener to open the info window when the marker is clicked
@@ -46,6 +53,6 @@
       </script>
     </head>
     <body>
-      <div id="map" style="height: 500px; width: 100%;"></div>
+      <div id="map" style="height: 900px; width: 100%;"></div>
     </body>
-    </html>
+</html>
