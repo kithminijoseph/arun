@@ -1,5 +1,6 @@
 /* Basic reset */
 * {
+    font-family: Optima, sans-serif;
 
     background: #ffd36c;
 }
@@ -119,55 +120,86 @@ h1 span {
 }
 
 /* Container styling for itinerary */
+/* Container styling for itinerary */
 .container {
     background-color: rgba(141, 206, 238, 0.884);
-    padding: 200px;
+    padding: 20px; /* Reduced padding for a tighter fit */
     border-radius: 10px;
-    max-width: 300px;
+    max-width: 600px; /* Increased width to fit content better */
     width: 100%;
     margin: 0 auto;
 }
+@keyframes pulse {
+    0%, 100% { 
+        transform: rotate(0deg); 
+    }
+    25% { 
+        transform: scale(0.7) translate(-20%, -20%);
+    }
+
+}
+
 
 .icon6 {
-    width: 210px;
+    width: 270px;
     background-color: #ffd36c00;
+    border-radius: 20%;
     background-color: rgba(141, 206, 238, 0.884);
+    animation: pulse 3.5s ease-in-out;
+}
+.map-header {
+    background-color: rgba(182, 16, 16, 0);
+    font-family: Optima, sans-serif;
+    color: rgb(211, 31, 31);
+    font-style: italic;
+    justify-content: center;
+    align-items: center;    border-radius: 30px;
+    width: 20%;
+    font-size: 15px; /* Adjusted font size */
+    padding: 5px; /* Minimal padding */
 }
 
 /* Itinerary styling */
 .itinerary-header {
     background-color: rgba(141, 206, 238, 0);
+    font-family: Optima, sans-serif;
     text-align: center;
-    font-size: 30px;
-    list-style-type: none;
-    padding: 0;
+    font-size: 25px; /* Adjusted font size */
+    margin-bottom: 10px; /* Reduced margin for tighter fit */
+    padding: 5px; /* Minimal padding */
 }
+
 .itinerary {
     background-color: #ffffff;
     text-align: left;
-    height: 20px;
-    width: 500px;
+    font-family: Optima, sans-serif;
+    padding: 10px; /* Reduced padding */
+    margin-bottom: 5px; /* Reduced margin between itinerary items */
     list-style-type: none;
-    padding: 0;
+    font-size: 18px; /* Adjust font size for better fit */
+    width: auto; /* Allow width to adjust based on content */
 }
+
 .itinerary2 {
     background-color: #ffffff00;
     text-align: left;
-    height: 20px;
-    width: 500px;
+    padding: 10px; /* Reduced padding */
+    margin-bottom: 5px; /* Reduced margin between itinerary items */
     list-style-type: none;
-    padding: 0;
+    font-size: 18px; /* Adjust font size for better fit */
+    width: auto; /* Allow width to adjust based on content */
 }
 
 .itinerary li {
     color: #4c8aef;
-    font-size: 20px
+    font-size: 16px; /* Slightly smaller font for a tighter fit */
 }
 
 .itinerary a {
     color: #4c8aef;
     text-decoration: none;
 }
+
 
 #confetti {
     left: 0;
